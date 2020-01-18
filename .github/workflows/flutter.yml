@@ -22,15 +22,15 @@ jobs:
           flutter upgrade
       - name: Install packages
         run: |
-          cd ./rock_paper_scissors
+          cd ./demoapp
           flutter pub get
       - name: Lint
         run: |
-          cd ./rock_paper_scissors
+          cd ./demoapp
           flutter analyze
       - name: Unit test
         run: |
-          cd ./rock_paper_scissors
+          cd ./demoapp
           flutter test
   build-Android:
     name: Build Android apk
@@ -50,7 +50,7 @@ jobs:
           flutter upgrade
       - name: Build apk package
         run: |
-          cd ./rock_paper_scissors
+          cd ./demoapp
           flutter build apk --release
   build-iOS:
     name: Build iOS package
@@ -70,5 +70,5 @@ jobs:
           flutter upgrade
       - name: build iOS package
         run: |
-          cd ./rock_paper_scissors
+          cd ./demoapp
           flutter build ios --release --no-codesign
