@@ -22,15 +22,12 @@ jobs:
           flutter upgrade
       - name: Install packages
         run: |
-          cd ./demoapp
           flutter pub get
       - name: Lint
         run: |
-          cd ./demoapp
           flutter analyze
       - name: Unit test
         run: |
-          cd ./demoapp
           flutter test
   build-Android:
     name: Build Android apk
@@ -50,7 +47,6 @@ jobs:
           flutter upgrade
       - name: Build apk package
         run: |
-          cd ./demoapp
           flutter build apk --release
   build-iOS:
     name: Build iOS package
@@ -70,5 +66,4 @@ jobs:
           flutter upgrade
       - name: build iOS package
         run: |
-          cd ./demoapp
           flutter build ios --release --no-codesign
